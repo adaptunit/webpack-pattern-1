@@ -1,0 +1,28 @@
+/* -------b: customization-------- */
+/* change the theme color and add a new theme color */
+$primary: #d904c0;
+$custom-color: purple;
+
+$theme-colors: (
+  primary: $primary,
+  light: #83bbf2,
+  custom-color: $custom-color
+);
+/* -------e: customization-------- */
+
+
+.btn-outline-light, .btn-outline-warning { 
+    &:hover {
+        color: #FFF !important;
+    }
+}
+
+/* import Bootstrap to set the changes! */
+@import "bootstrap";
+
+/* custom horizontal margin for button + media */
+@include media-breakpoint-between(xs, md) {
+   .btn {
+         margin: 0 0 0.5em 0;
+   }
+}

@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Regular.ttf)
+}
+
+@import 'variables';
+@import 'bootstrap_custom';
+
+$bootstrap_exists: global false;
+
+/* -------b: check is Boostrap enabled-------- */
+@if function-exists(theme-color) { $bootstrap_exists: true; } @else { $bootstrap_exists: false; }
+/* -------e: check is Boostrap enabled-------- */
+
+
+/* -------b: example how to customize styles using Flow Control function-------- */
+.navbar {
+ @if $bootstrap_exists == false {
+   display: none;
+ }
+}
+/* -------e: example how to customize styles using Flow Control function-------- */
+
+
+
+html {
+  font-size: $root-font-size;
+  font-family: $font-family;
+  max-width: $page-width;
+  margin: 0 auto;
+  text-align: center;
+
+  .container {
+	#root {
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		display: flex;
+
+		.logo-webpack {
+			width: 50%;
+		}
+
+	}
+  }
+}
+
+p {
+  font-size: $paragraph-font-size;
+}
