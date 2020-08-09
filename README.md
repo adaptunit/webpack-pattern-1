@@ -8,6 +8,7 @@ Minimal Webpack 4 boilerplate with Babel, Sass, ESLint, Hot Module Replacement, 
 
 ```
 git clone https://github.com/adaptunit/webpack-pattern-1.git
+cd webpack-pattern-1.git
 yarn install
 ```
 
